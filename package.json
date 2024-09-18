@@ -1,0 +1,29 @@
+{
+	"name": "bigint-quantile",
+	"type": "module",
+	"version": "0.0.1",
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.cjs"
+		}
+	},
+	"main": "./dist/index.cjs",
+	"types": "./dist/index.d.ts",
+	"files": ["dist"],
+	"scripts": {
+		"build": "bunx unbuild",
+		"test": "bun test",
+		"test:coverage": "bun test --coverage",
+		"lint": "bunx biome check .",
+		"format": "bunx biome check . --write --unsafe"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.9.1",
+		"@types/bun": "latest",
+		"unbuild": "^2.0.0"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	}
+}
